@@ -115,12 +115,12 @@ export function ImageCarousel() {
 
             {/* Text content */}
             <div
-              className={cn(
-                "absolute bottom-0 left-0 right-0 p-6 md:p-8 lg:p-10 transition-all duration-700 ease-out",
-                index === currentIndex
-                  ? "translate-y-0 opacity-100"
-                  : "translate-y-12 opacity-0"
-              )}
+                className={cn(
+                  "absolute bottom-0 left-0 right-0 p-6 md:p-8 lg:p-10 transition-all duration-700 ease-out hidden sm:block",
+                  index === currentIndex
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-12 opacity-0"
+                )}
             >
               <div className="bg-black/40 backdrop-blur-xl rounded-2xl p-5 md:p-6 border border-white/10 shadow-2xl w-[60vw] mx-auto flex flex-col items-center justify-center">
                 <h3
