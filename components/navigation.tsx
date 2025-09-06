@@ -80,7 +80,7 @@ export default function Navigation() {
                 </Link>
               ))}
               <div className="px-3 py-2">
-                <Button className="w-full bg-primary hover:bg-primary/90 shadow-md">Get Involved</Button>
+                <Button className="w-full bg-primary hover:bg-primary/90 shadow-md">Login</Button>
               </div>
             </div>
           </div>

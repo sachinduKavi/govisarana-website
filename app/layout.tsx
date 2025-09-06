@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: "Govisarana - Empowering Farmer Families in Sri Lanka", // Updated title to remove Agricultural Empowerment
   description: "Empowering farmer families through sustainable agriculture, savings programs, and export opportunities",
   generator: "v0.app",
+  icons: {
+    icon: "/favicon.ico",
+  }
 }
 
 export default function RootLayout({
