@@ -29,27 +29,37 @@ export default function ProgramsPage() {
               Empowering <span className="text-primary">Communities</span> Through Action
             </h1>
             <p className="text-xl text-muted-foreground text-pretty mb-8 max-w-2xl mx-auto">
-              Comprehensive programs designed to support farmer families at every stage of their journey toward
-              prosperity and self-reliance.
+              The Govisarana Project implements a wide range of programmes, services, and initiatives to empower 
+              farming families, strengthen rural communities, and promote sustainable agricultural development.
+              These programmes are designed to address economic, social, and technological needs of member families.
             </p>
           </div>
         </div>
       </section>
 
+      {/* Services Description */}
+<div className="mb-12 text-center">
+  <h2 className="text-3xl font-bold mb-4">Services</h2>
+  <p className="text-muted-foreground max-w-2xl mx-auto text-base leading-relaxed">
+    Govisarana provides essential services to its members, ensuring that farming families receive the necessary 
+    support to improve their livelihoods and become self-reliant. Key services include:
+  </p>
+</div>
+
+
       {/* Main Programs */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 mb-20">
-            {/* Savings & Lending Circles */}
+            {/* Financial Services */}
             <Card className="border-primary/20 hover:border-primary/40 transition-colors p-8">
               <CardHeader className="p-0">
                 <div className="bg-primary/10 p-4 rounded-lg w-fit mb-6">
                   <DollarSign className="h-8 w-8 text-primary" />
                 </div>
-                <CardTitle className="text-2xl mb-4">Savings & Lending Circles</CardTitle>
+                <CardTitle className="text-2xl mb-4">Financial Services</CardTitle>
                 <CardDescription className="text-base mb-6">
-                  Building financial discipline and providing access to capital through community-based savings programs
-                  that strengthen local economies.
+                   Savings schemes, micro-finance programmes, and affordable loans through the Govisarana Bank.
                 </CardDescription>
 
                 <div className="space-y-4 mb-6">
@@ -89,16 +99,15 @@ export default function ProgramsPage() {
               </CardHeader>
             </Card>
 
-            {/* Organic Farming */}
+            {/* Agricultural Support Services */}
             <Card className="border-primary/20 hover:border-primary/40 transition-colors p-8">
               <CardHeader className="p-0">
                 <div className="bg-primary/10 p-4 rounded-lg w-fit mb-6">
                   <Leaf className="h-8 w-8 text-primary" />
                 </div>
-                <CardTitle className="text-2xl mb-4">Organic Farming Initiative</CardTitle>
+                <CardTitle className="text-2xl mb-4">Agricultural Support Services</CardTitle>
                 <CardDescription className="text-base mb-6">
-                  Promoting sustainable, eco-friendly agricultural practices that benefit both farmers and the
-                  environment while ensuring food safety.
+                  Access to scientific knowledge, modern farming technology, and training programmes for farmers
                 </CardDescription>
 
                 <div className="space-y-4 mb-6">
@@ -138,16 +147,16 @@ export default function ProgramsPage() {
               </CardHeader>
             </Card>
 
-            {/* Village Industries */}
+            {/* Market Linkage Services */}
             <Card className="border-primary/20 hover:border-primary/40 transition-colors p-8">
               <CardHeader className="p-0">
                 <div className="bg-primary/10 p-4 rounded-lg w-fit mb-6">
                   <Users className="h-8 w-8 text-primary" />
                 </div>
-                <CardTitle className="text-2xl mb-4">Village Industries Program</CardTitle>
+                <CardTitle className="text-2xl mb-4">Market Linkage Services</CardTitle>
                 <CardDescription className="text-base mb-6">
-                  Creating small-scale industries for rural women, fostering entrepreneurship and economic independence
-                  within farming communities.
+                  Creating reliable markets for farmer products and supporting value-added industries, particularly for rural
+                   women
                 </CardDescription>
 
                 <div className="space-y-4 mb-6">

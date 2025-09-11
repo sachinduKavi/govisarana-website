@@ -147,7 +147,7 @@ export default function ImpactPage() {
                   <div className="bg-primary/10 p-3 rounded-lg">
                     <DollarSign className="h-6 w-6 text-primary" />
                   </div>
-                  <CardTitle className="text-xl">Savings & Lending Impact</CardTitle>
+                  <CardTitle className="text-xl">Financial Services Impact</CardTitle>
                 </div>
               </CardHeader>
 
@@ -178,7 +178,7 @@ export default function ImpactPage() {
                   <div className="bg-primary/10 p-3 rounded-lg">
                     <Leaf className="h-6 w-6 text-primary" />
                   </div>
-                  <CardTitle className="text-xl">Organic Farming Impact</CardTitle>
+                  <CardTitle className="text-xl">Agricultural Support Impact</CardTitle>
                 </div>
               </CardHeader>
 
@@ -209,7 +209,7 @@ export default function ImpactPage() {
                   <div className="bg-primary/10 p-3 rounded-lg">
                     <Users className="h-6 w-6 text-primary" />
                   </div>
-                  <CardTitle className="text-xl">Village Industries Impact</CardTitle>
+                  <CardTitle className="text-xl">Market Linkage Services Impact</CardTitle>
                 </div>
               </CardHeader>
 
@@ -272,12 +272,12 @@ export default function ImpactPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4">Success Stories</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Real stories from farmers and families whose lives have been transformed through our programs.
+            <p className="text-muted-foreground max-w-2xl mx-auto ">
+              The success of the Govisarana Project is best reflected in the voices of its members. Through their experiences, we can see how collective strength, financial empowerment, and sustainable farming practices have transformed lives across our farming villages. These testimonials highlight the true impact of Govisarana.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8 mb-16">
+          <div className="grid lg:grid-cols-2 gap-8 mb-16">
             <Card className="border-primary/20 p-6">
               <CardHeader className="p-0">
                 <div className="flex items-center space-x-3 mb-4">
@@ -285,13 +285,12 @@ export default function ImpactPage() {
                     <Star className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <CardTitle className="text-lg">Kamala's Organic Success</CardTitle>
-                    <CardDescription className="text-sm">Kandy District</CardDescription>
+                    <CardTitle className="text-lg">Mrs. Kamala Perera </CardTitle>
+                    <CardDescription className="text-sm">Govigama 3</CardDescription>
                   </div>
                 </div>
-                <CardDescription className="text-sm leading-relaxed">
-                  "After joining Govisarana's organic farming program, my family's income increased by 70%. We now
-                  export our organic spices to three countries and have become a model farm in our village."
+                <CardDescription className="text-sm leading-relaxed text-justify">
+                  "As a mother of three, I struggled to earn a steady income. Through Govisarana’s women empowerment initiatives, I received training in food processing and was provided with raw materials to start a small-scale industry. Today, I not only earn enough to support my family but also employ two other women from my village."
                 </CardDescription>
                 <div className="flex items-center space-x-4 mt-4 text-xs text-muted-foreground">
                   <span>• 70% income increase</span>
@@ -307,17 +306,42 @@ export default function ImpactPage() {
                     <Star className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <CardTitle className="text-lg">Priya's Village Industry</CardTitle>
-                    <CardDescription className="text-sm">Matara District</CardDescription>
+                    <CardTitle className="text-lg">Mr. Sunil Fernando </CardTitle>
+                    <CardDescription className="text-sm">Govigama 5</CardDescription>
                   </div>
                 </div>
-                <CardDescription className="text-sm leading-relaxed">
-                  "The village industries program helped me start a food processing business. I now employ 12 women from
-                  my village and we produce value-added coconut products for local and international markets."
+                <CardDescription className="text-sm leading-relaxed text-justify">
+                  "I used to depend on money lenders and fell into debt often. Govisarana Bank gave me access to microfinance at affordable rates and also guided me on financial discipline. With this support, I was able to buy seeds, harvest a better yield, and repay my loans on time. Now, I am debt-free and confident about my future."
                 </CardDescription>
                 <div className="flex items-center space-x-4 mt-4 text-xs text-muted-foreground">
                   <span>• 12 jobs created</span>
                   <span>• International sales</span>
+                </div>
+              </CardHeader>
+            </Card>
+            
+
+            
+
+          </div>
+          <div className="grid lg:grid-cols-2 gap-8 mb-16">
+              <Card className="border-primary/20 p-6">
+              <CardHeader className="p-0">
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="bg-primary/10 p-2 rounded-full">
+                    <Star className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <CardTitle className="text-lg">Youth Group </CardTitle>
+                    <CardDescription className="text-sm">Govigama 8</CardDescription>
+                  </div>
+                </div>
+                <CardDescription className="text-sm leading-relaxed text-justify">
+                  "A group of us young farmers joined Govisarana’s youth entrepreneurship initiative. We received training in modern farming techniques and support to establish a collective farming project. This has given us a stable income and renewed hope to stay in our village without migrating to cities for work."
+                </CardDescription>
+                <div className="flex items-center space-x-4 mt-20 text-xs text-muted-foreground">
+                  <span>• 25 families helped</span>
+                  <span>• LKR 2M saved</span>
                 </div>
               </CardHeader>
             </Card>
@@ -329,13 +353,13 @@ export default function ImpactPage() {
                     <Star className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <CardTitle className="text-lg">Sunil's Savings Group</CardTitle>
-                    <CardDescription className="text-sm">Galle District</CardDescription>
+                    <CardTitle className="text-lg">Women’s Savings Circle  </CardTitle>
+                    <CardDescription className="text-sm">Govigama 10</CardDescription>
                   </div>
                 </div>
-                <CardDescription className="text-sm leading-relaxed">
-                  "Our savings group has helped 25 families in the village. We've collectively saved over LKR 2 million
-                  and provided loans for education, healthcare, and business development without any external debt."
+                <CardDescription className="text-sm leading-relaxed text-justify">
+                  "Before Govisarana, we had no habit of saving. With the introduction of group savings programmes, we now contribute a small amount every month. Over time, these savings helped us build a fund that we use for emergencies, education, and small investments. It has brought us financial security and unity as a community.
+                  These stories represent only a small part of Govisarana’s journey. Every farming family has a unique story of progress, resilience, and empowerment, showing how the Govisarana Project continues to transform rural Sri Lanka."
                 </CardDescription>
                 <div className="flex items-center space-x-4 mt-4 text-xs text-muted-foreground">
                   <span>• 25 families helped</span>
@@ -343,7 +367,7 @@ export default function ImpactPage() {
                 </div>
               </CardHeader>
             </Card>
-          </div>
+            </div>
         </div>
       </section>
 
