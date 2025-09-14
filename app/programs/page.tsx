@@ -22,7 +22,7 @@ export default function ProgramsPage() {
     <div className="min-h-screen bg-gradient-to-br from-white via-amber-50/30 to-emerald-50/30">
       {/* Hero Section */}
       <section 
-        className="relative py-20 min-h-[80vh] flex items-center justify-center overflow-hidden"
+        className="relative py-20 min-h-[75vh] flex items-center justify-center overflow-hidden"
         style={{
           backgroundImage: "url('/farmer.jpg')",
           backgroundSize: "cover",
