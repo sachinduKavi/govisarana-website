@@ -31,11 +31,11 @@ export default function ProgramsPage() {
         }}
       >
         {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/50 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/50 via-primary/50 to-transparent"></div>
         
         {/* Content container */}
         <div className="container mx-auto px-4 text-center relative z-10">
-          <div className="max-w-4xl mx-auto bg-white/95 backdrop-blur-sm p-8 rounded-2xl shadow-2xl border border-white/30">
+          <div className="max-w-4xl mx-auto backdrop-blur-xs bg-[#cecece34] p-8 rounded-2xl shadow-2xl border border-white/30">
             <Badge className="mb-4 bg-primary/20 text-primary border-primary/30 hover:bg-primary/30 text-sm font-semibold py-1 px-3">
               🌱 Our Programs
             </Badge>
@@ -44,7 +44,7 @@ export default function ProgramsPage() {
               Empowering <span className="text-primary">Communities</span> Through Action
             </h1>
             
-            <p className="text-xl text-gray-700 text-pretty mb-8 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xl text-white text-pretty mb-8 max-w-2xl mx-auto leading-relaxed">
               The Govisarana Project implements a wide range of programmes, services, and initiatives to empower 
               farming families, strengthen rural communities, and promote sustainable agricultural development.
               These programmes are designed to address economic, social, and technological needs of member families.
