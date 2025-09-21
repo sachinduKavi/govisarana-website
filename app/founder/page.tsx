@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Users, Heart, Target, TrendingUp, Award, Globe } from "lucide-react"
+import { Users, Heart, Target, TrendingUp, Award, Globe, Lightbulb, Shield, Scale, Sparkles } from "lucide-react"
 
 export default function FounderPage() {
   return (
@@ -16,9 +16,7 @@ export default function FounderPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-balance">
               Our Founder
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-balance">
-              Meet the visionary behind Govisarana's mission to transform rural communities across Sri Lanka
-            </p>
+        
           </div>
 
           {/* Founder Profile */}
@@ -39,6 +37,8 @@ export default function FounderPage() {
             <div className="space-y-6">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2">AWS Kumarathunge</h2>
+                <h3>BA.Sp (International Politics) </h3>
+                <h3>University of Peradeniya </h3>
                 <p className="text-xl text-primary font-semibold mb-4">Founder of The Govisarana Project</p>
                 <div className="bg-primary/10 border-l-4 border-primary p-6 rounded-r-lg">
                   <p className="text-lg text-foreground italic">
@@ -72,9 +72,11 @@ export default function FounderPage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Personal Journey</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">About AWS Kumarathunge</h2>
             <p className="text-lg text-muted-foreground">
-              A path dedicated to rural empowerment and community development
+              Mr. AWS Kumarathunge, the visionary founder of Digital Village and Govisarana, is a graduate of the University of Peradeniya who chose to dedicate his life to transforming Sri Lanka's rural communities. For over 20 years, he has worked directly with farming families, gaining a profound understanding of the challenges they face—poverty cycles, dependency mindsets, limited market access, and reliance on informal moneylenders.
+As a social entrepreneur, Mr. Kumarathunge has pioneered innovative initiatives that empower farmers, women, and youth, creating sustainable livelihoods, promoting financial inclusion, and strengthening local economies. Through his tireless work, he has reached and inspired more than 67,000 rural households across Sri Lanka, raising awareness about opportunities, technology adoption, and self-reliance.
+His approach combines hands-on field experience, strategic vision, and community-driven solutions, earning him recognition as one of Sri Lanka's leading champions of rural development. Beyond national borders, he draws inspiration from global innovators and seeks to bring lessons from international best practices to Sri Lanka's countryside, shaping a future where rural communities are digitally empowered, economically resilient, and socially vibrant.
             </p>
           </div>
 
@@ -116,93 +118,160 @@ export default function FounderPage() {
         </div>
       </section>
 
-      {/* Vision & Mission */}
+      {/* Why Govisarana is Different Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Vision & Mission</h2>
-            <p className="text-lg text-muted-foreground">
-              Transforming rural livelihoods through sustainable empowerment
+          <div className="text-center mb-16">
+            <Badge className="mb-4 bg-primary/20 text-primary border-primary/30">Our Approach</Badge>
+            <h2 className="text-3xl font-bold mb-4 text-foreground">Why Govisarana is Different</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
+              Govisarana stands apart as a revolutionary model in rural development because it fuses community organization, 
+              technology, and economic empowerment into a single, holistic framework.
             </p>
           </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20">
-              <CardContent className="p-8">
-                <div className="flex items-center gap-3 mb-4">
-                  <Target className="h-8 w-8 text-primary" />
-                  <h3 className="text-2xl font-bold text-foreground">The Realization</h3>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
+            {/* Integrated Community Institutions */}
+            <Card className="border-l-4 border-l-primary">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-3 mb-4">
+                  <div className="bg-primary/10 p-2 rounded-full">
+                    <Scale className="h-5 w-5 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground">Integrated Community Institutions</h3>
                 </div>
-                <p className="text-muted-foreground mb-4">
-                  Families need help breaking free from harmful borrowing habits and dependency cycles that keep them
-                  trapped in poverty.
-                </p>
-                <p className="text-muted-foreground">
-                  The solution lies in encouraging income-generating opportunities and building sustainable savings
-                  practices.
-                </p>
+                <ul className="text-muted-foreground space-y-2">
+                  <li className="flex items-start">
+                    <span className="mr-2">•</span>
+                    Every Farming Village is a living ecosystem with three core institutions: Communications Hub, Small Economic Centre, and Govisarana Bank.
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-2">•</span>
+                    These institutions operate in tandem to create a self-sustaining village economy.
+                  </li>
+                </ul>
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-to-br from-secondary/5 to-secondary/10 border-secondary/20">
-              <CardContent className="p-8">
-                <div className="flex items-center gap-3 mb-4">
-                  <Heart className="h-8 w-8 text-secondary" />
-                  <h3 className="text-2xl font-bold text-foreground">Founding Vision</h3>
+            {/* Digital-First Approach */}
+            <Card className="border-l-4 border-l-secondary">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-3 mb-4">
+                  <div className="bg-secondary/10 p-2 rounded-full">
+                    <Sparkles className="h-5 w-5 text-secondary" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground">Digital-First Approach</h3>
                 </div>
-                <p className="text-muted-foreground">
-                  Govisarana was created as a comprehensive platform to uplift rural livelihoods and create sustainable
-                  financial habits, empowering communities to achieve lasting prosperity.
-                </p>
+                <ul className="text-muted-foreground space-y-2">
+                  <li className="flex items-start">
+                    <span className="mr-2">•</span>
+                    Harnesses digital tools to bridge information gaps and facilitate secure transactions.
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-2">•</span>
+                    Provides mobile updates on weather, market prices, and e-commerce opportunities.
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Women-Centric Empowerment */}
+            <Card className="border-l-4 border-l-primary">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-3 mb-4">
+                  <div className="bg-primary/10 p-2 rounded-full">
+                    <Users className="h-5 w-5 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground">Women-Centric Empowerment</h3>
+                </div>
+                <ul className="text-muted-foreground space-y-2">
+                  <li className="flex items-start">
+                    <span className="mr-2">•</span>
+                    Women are at the heart of Govisarana, participating in weekly fairs and enterprises.
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-2">•</span>
+                    Fosters financial literacy, confidence, and leadership among rural women.
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Financial Inclusion */}
+            <Card className="border-l-4 border-l-secondary">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-3 mb-4">
+                  <div className="bg-secondary/10 p-2 rounded-full">
+                    <TrendingUp className="h-5 w-5 text-secondary" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground">Financial Inclusion</h3>
+                </div>
+                <ul className="text-muted-foreground space-y-2">
+                  <li className="flex items-start">
+                    <span className="mr-2">•</span>
+                    Introduces a culture of savings, responsible borrowing, and entrepreneurship support.
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-2">•</span>
+                    Shields families from exploitative moneylenders and enables sustainable financial growth.
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Scalable Model */}
+            <Card className="border-l-4 border-l-primary">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-3 mb-4">
+                  <div className="bg-primary/10 p-2 rounded-full">
+                    <Lightbulb className="h-5 w-5 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground">Scalable Model</h3>
+                </div>
+                <ul className="text-muted-foreground space-y-2">
+                  <li className="flex items-start">
+                    <span className="mr-2">•</span>
+                    Originated as a pilot in Trincomalee (2018), now a replicable blueprint for nationwide scaling.
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-2">•</span>
+                    Structured small-group system adaptable to diverse rural contexts.
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Holistic Development */}
+            <Card className="border-l-4 border-l-secondary">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-3 mb-4">
+                  <div className="bg-secondary/10 p-2 rounded-full">
+                    <Shield className="h-5 w-5 text-secondary" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground">Holistic Development</h3>
+                </div>
+                <ul className="text-muted-foreground space-y-2">
+                  <li className="flex items-start">
+                    <span className="mr-2">•</span>
+                    Addresses every link in the rural value chain: from home gardens to markets.
+                  </li>
+                  <li className="flex items-start">
+                    <span className="mr-2">•</span>
+                    Ensures no aspect of rural life—social, economic, or technological—is left unattended.
+                  </li>
+                </ul>
               </CardContent>
             </Card>
           </div>
-        </div>
-      </section>
 
-      {/* Empowering Women */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Empowering Women</h2>
-            <p className="text-lg text-muted-foreground">Recognizing women as the backbone of rural development</p>
-          </div>
-
-          <Card className="bg-gradient-to-r from-primary/5 to-secondary/5 border-primary/20">
-            <CardContent className="p-8">
-              <div className="text-center mb-6">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
-                  <Users className="h-8 w-8 text-primary" />
-                </div>
-                <h3 className="text-2xl font-bold text-foreground mb-4">Women as Main Beneficiaries</h3>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <h4 className="font-semibold text-foreground mb-3">Support Areas:</h4>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-primary rounded-full"></div>
-                      Saving money and financial literacy
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-primary rounded-full"></div>
-                      Loan repayment strategies
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-primary rounded-full"></div>
-                      Value addition to agricultural products
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-foreground mb-3">Ultimate Goal:</h4>
-                  <p className="text-muted-foreground">
-                    Transform farming from a subsistence activity into a profitable livelihood that provides dignity and
-                    financial independence for rural families.
-                  </p>
-                </div>
-              </div>
+          <Card className="mt-12 bg-gradient-to-r from-primary/5 to-secondary/5 border-primary/20">
+            <CardContent className="p-8 text-center">
+              <h3 className="text-2xl font-bold text-foreground mb-4">Redefining Rural Development</h3>
+              <p className="text-lg text-muted-foreground">
+                In essence, Govisarana is different because it does not merely aim to develop villages—it seeks to 
+                redefine rural development itself, transforming ordinary communities into digitally empowered, 
+                economically resilient, and socially vibrant hubs where every household has the opportunity to thrive.
+              </p>
             </CardContent>
           </Card>
         </div>
@@ -212,14 +281,14 @@ export default function FounderPage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Guiding Principles</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Kumarathunge's Guiding Principles </h2>
           </div>
 
           <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-8 mb-8">
             <div className="text-center">
               <h3 className="text-3xl font-bold text-primary mb-4">"Good Foods for Good Life"</h3>
               <p className="text-lg text-muted-foreground">
-                Promoting healthy diets and strong communities through sustainable agricultural practices
+                embodies Mr. AWS Kumarathunge's commitment to healthy diets, strong communities, and sustainable agriculture. He champions health and wellness, combating non-communicable diseases through awareness programs, nutrition education, and lifestyle improvements that uplift entire communities.
               </p>
             </div>
           </div>
@@ -287,8 +356,8 @@ export default function FounderPage() {
             <CardContent className="p-8 text-center">
               <h3 className="text-2xl font-bold text-foreground mb-4">Vision for the Future</h3>
               <p className="text-lg text-muted-foreground">
-                To become the leading community empowerment model in South Asia, creating an excellent environment for
-                poor families to rise with dignity and achieve lasting financial independence.
+                Our vision is to establish Govisarana as the leading model of community empowerment in South Asia, where rural families can thrive with dignity and achieve lasting financial independence. We aspire to create vibrant, self-reliant villages equipped with modern technology, sustainable agricultural practices, and inclusive economic opportunities.
+Through education, digital connectivity, and holistic support, we aim to break cycles of poverty, uplift women and youth, and nurture communities where every household has the tools, knowledge, and confidence to prosper. By expanding this model across Sri Lanka and beyond, Govisarana seeks to inspire a future where rural life is empowered, resilient, and full of opportunity.
               </p>
             </CardContent>
           </Card>

@@ -42,36 +42,70 @@ export default function DownloadPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary/5 to-primary/10 py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="mb-8">
+      {/* Enhanced Hero Section */}
+      <section className="relative bg-gradient-to-br from-emerald-400 via-primary/90 to-amber-400 py-16 px-4 overflow-hidden">
+        {/* Animated background elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-20 -left-20 w-72 h-72 bg-yellow-300/20 rounded-full mix-blend-multiply animate-pulse"></div>
+          <div className="absolute top-1/4 -right-10 w-96 h-96 bg-emerald-300/20 rounded-full mix-blend-multiply animate-pulse delay-700"></div>
+          <div className="absolute bottom-0 left-1/3 w-80 h-80 bg-amber-300/20 rounded-full mix-blend-multiply animate-pulse delay-1000"></div>
+        </div>
+
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          {/* Logo with enhanced styling */}
+          <div className="mb-8 relative">
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-80 h-80 bg-white/30 rounded-full animate-ping"></div>
+            </div>
             <Image
               src="/logo.png"
               alt="Govisarana Logo"
-              width={120}
-              height={120}
-              className="mx-auto mb-6 rounded-full shadow-lg"
+              width={200}
+              height={200}
+              className="mx-auto mb-6 rounded-full shadow-2xl border-4 border-white relative z-10 transform hover:scale-105 transition-transform duration-300"
             />
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 text-balance">Your Community, Your App</h1>
+          {/* Main heading with gradient text */}
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance bg-gradient-to-r from-white to-amber-100 bg-clip-text text-transparent drop-shadow-md">
+            Your Community, Your App
+          </h1>
 
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8 text-pretty">
-            Stay connected with the Govisarana Project through the D-Village app—empowering farmer families and rural
-            communities with tools for growth and sustainable living.
-          </p>
+          {/* Description with improved readability */}
+          <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-white/20 shadow-xl">
+            <p className="text-lg md:text-xl text-white max-w-3xl mx-auto text-pretty leading-relaxed">
+              Stay connected with the <span className="font-semibold text-amber-100">Govisarana Project</span> through the D-Village app—empowering farmer families and rural communities with tools for growth and sustainable living.
+            </p>
+          </div>
 
-          <div className="flex items-center justify-center gap-4 text-sm text-muted-foreground">
-            <div className="flex items-center gap-1">
-              <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-              <span>4.8 Rating</span>
+          {/* Stats with icons and better visual treatment */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-white">
+            <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
+              <div className="flex">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="h-5 w-5 fill-yellow-300 text-yellow-300" />
+                ))}
+              </div>
+              <span className="font-medium">4.8 Rating</span>
             </div>
-            <div className="flex items-center gap-1">
-              <Download className="h-4 w-4" />
-              <span>100+ Downloads</span>
+            
+            <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
+              <Download className="h-5 w-5" />
+              <span className="font-medium">1000+ Downloads</span>
             </div>
           </div>
+
+          {/* Call-to-action button */}
+          <div className="mt-10">
+            <button className="bg-white text-primary font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center mx-auto gap-2">
+              <Download className="h-5 w-5" />
+              Download Now
+            </button>
+          </div>
+
+          {/* Decorative elements */}
+          <div className="absolute -bottom-10 -left-10 w-24 h-24 bg-amber-300/30 rounded-lg rotate-45"></div>
+          <div className="absolute -top-5 -right-5 w-16 h-16 bg-emerald-300/30 rounded-lg rotate-12"></div>
         </div>
       </section>
 
@@ -225,7 +259,7 @@ export default function DownloadPage() {
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="h-4 w-4" />
-                <span>+94 11 234 5678</span>
+                <span>+94 81 223 9995</span>
               </div>
             </div>
           </div>

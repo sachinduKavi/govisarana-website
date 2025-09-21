@@ -39,6 +39,13 @@ const GallerySection = () => {
     { id: 17, src: 'https://firebasestorage.googleapis.com/v0/b/govisarana-project.firebasestorage.app/o/Gallery%2FIMG-20250910-WA0018.jpg?alt=media&token=7dbc3bb4-9e0d-4d2b-baf3-2686085fc958', alt: "Govisarana Awareness programs" },
     { id: 18, src: 'https://firebasestorage.googleapis.com/v0/b/govisarana-project.firebasestorage.app/o/Gallery%2FIMG-20250910-WA0019.jpg?alt=media&token=b29736e9-e602-4088-b8a0-af3724f2bb75', alt: "Govisarana  small groups - Weekly fair" },
     { id: 19, src: 'https://firebasestorage.googleapis.com/v0/b/govisarana-project.firebasestorage.app/o/Gallery%2FIMG-20250910-WA0020.jpg?alt=media&token=4e189eef-1791-479e-925b-536f03716e2d', alt: "Govisarana  small groups - Weekly fair" },
+    { id: 19, src: 'https://firebasestorage.googleapis.com/v0/b/govisarana-project.firebasestorage.app/o/Gallery%2FIMG-20250921-WA0002.jpg?alt=media&token=7150454d-f257-4784-b5f8-922a69fe0bd8', alt: "" },
+    { id: 19, src: 'https://firebasestorage.googleapis.com/v0/b/govisarana-project.firebasestorage.app/o/Gallery%2FIMG-20250921-WA0003.jpg?alt=media&token=9f317d68-0561-4191-9fc0-1c47d6686226', alt: "" },
+    { id: 19, src: 'https://firebasestorage.googleapis.com/v0/b/govisarana-project.firebasestorage.app/o/Gallery%2FIMG-20250921-WA0004.jpg?alt=media&token=d716322f-4d65-4cc5-a7ec-0e152eae2c26', alt: "" },
+    { id: 19, src: 'https://firebasestorage.googleapis.com/v0/b/govisarana-project.firebasestorage.app/o/Gallery%2FIMG-20250921-WA0005.jpg?alt=media&token=2569a1a1-655b-4a5f-b846-dbfd03e38bf3', alt: "" },
+    { id: 19, src: 'https://firebasestorage.googleapis.com/v0/b/govisarana-project.firebasestorage.app/o/Gallery%2FIMG-20250921-WA0006.jpg?alt=media&token=378db9e4-0469-4ad7-98d8-931499b46f6e', alt: "" },
+    { id: 19, src: 'https://firebasestorage.googleapis.com/v0/b/govisarana-project.firebasestorage.app/o/Gallery%2FIMG-20250921-WA0007.jpg?alt=media&token=987929d2-5600-4d08-874b-9187a9781bec', alt: "" },
+    { id: 19, src: 'https://firebasestorage.googleapis.com/v0/b/govisarana-project.firebasestorage.app/o/Gallery%2FIMG-20250921-WA0008.jpg?alt=media&token=233eb3c2-6321-4736-bcdc-d8ad782ffdaf', alt: "" },
   ];
 
   // Prevent body scroll when modal is open

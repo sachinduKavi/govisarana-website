@@ -21,20 +21,49 @@ export default function ImpactPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-b from-card/30 to-background">
-        <div className="container mx-auto px-4 text-center">
-          <div className="max-w-4xl mx-auto">
-            <Badge className="mb-4 bg-primary/10 text-primary border-primary/20">📊 Our Impact</Badge>
-            <h1 className="text-4xl md:text-6xl font-bold text-balance mb-6">
-              Transforming Lives, <span className="text-primary">Measuring Success</span>
+      <section 
+        className="relative py-20 min-h-[75vh] flex items-center justify-center overflow-hidden"
+        style={{
+          backgroundImage: "url('/farmer.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed"
+        }}
+      >
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/50 via-primary/50 to-transparent"></div>
+        
+        {/* Content container */}
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <div className="max-w-4xl mx-auto backdrop-blur-xs bg-[#cecece34] p-8 rounded-2xl shadow-2xl border border-white/30">
+            
+            <h1 className="text-4xl md:text-6xl font-bold text-balance mb-6 text-gray-900 leading-tight">
+              Transforming Lives, <span className="text-primary">Measuring Success</span> 
             </h1>
-            <p className="text-xl text-muted-foreground text-pretty mb-8 max-w-2xl mx-auto">
-              Real results from our commitment to empowering farmer families across Sri Lanka through sustainable
-              agriculture and community development.
+            
+            <p className="text-xl text-white text-pretty mb-8 max-w-2xl mx-auto leading-relaxed">
+              Real results from our commitment to empowering farmer families across Sri Lanka through sustainable agriculture and community development.
             </p>
+            
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
+              <Button size="lg" className="text-lg px-8 bg-primary hover:bg-primary/90 shadow-lg">
+                Explore Programs
+              </Button>
+              <Button size="lg" variant="outline" className="text-lg px-8 bg-white text-primary border-primary hover:bg-primary/10">
+                Get Involved
+              </Button>
+            </div>
           </div>
         </div>
+        
+        {/* Decorative elements */}
+        <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-white to-transparent"></div>
       </section>
+
+
+
+      
 
       {/* Key Statistics */}
       <section className="py-20">

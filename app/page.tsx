@@ -46,7 +46,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section with Integrated Carousel */}
-      <section className="relative py-20 bg-gradient-to-b  min-h-[73vh] from-card/30 to-background overflow-hidden">
+      <section className="relative py-20 bg-gradient-to-b min-h-[73vh] from-card/30 to-background overflow-hidden">
         <div className="absolute inset-0 z-0 ">
           <ImageCarousel />
         </div>
@@ -54,6 +54,9 @@ export default function HomePage() {
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <div className="bg-gradient-to-br from-slate-900/70 via-slate-800/60 to-slate-900/70 backdrop-blur-xl rounded-3xl p-8 md:p-12 shadow-2xl border border-white/15">
+              <Badge className="mb-4 bg-primary/20 text-primary hover:bg-primary/30">
+                Digital Village Initiative
+              </Badge>
               <h1 className="text-3xl md:text-5xl font-bold text-balance mb-6 text-white drop-shadow-2xl transition-all duration-700">
                 {heroContent[currentSlide].title}
               </h1>
@@ -73,8 +76,85 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Modern Image Carousel Section */}
-      {/* Removed as it's integrated into the Hero Section */}
+      {/* About Govisarana */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <Badge variant="outline" className="mb-4 text-primary border-primary">
+              Digital Village Initiative
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-balance">Govisarana Project</h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-pretty">
+              A flagship project designed to strengthen rural farming families by combining digital tools, 
+              community organization, local market development, and financial inclusion.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="text-2xl font-bold mb-6">Structure of a Farming Village</h3>
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="bg-primary/10 p-2 rounded-full mt-1">
+                    <Users className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold">1,000 farming families</h4>
+                    <p className="text-muted-foreground">Living in one geographic area</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="bg-primary/10 p-2 rounded-full mt-1">
+                    <Users className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold">40 small groups</h4>
+                    <p className="text-muted-foreground">25 families each for effective participation and peer learning</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="bg-primary/10 p-2 rounded-full mt-1">
+                    <TrendingUp className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold">Current reach & target</h4>
+                    <p className="text-muted-foreground">Currently working with 10 Farming Villages (9,000+ families) and targeting 50,000 families</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-muted rounded-lg p-8">
+              <h3 className="text-2xl font-bold mb-6 text-center">Digital Village Initiative Aims</h3>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <div className="bg-primary/10 p-2 rounded-full">
+                    <Globe className="h-4 w-4 text-primary" />
+                  </div>
+                  <span>Bridge the rural-urban digital divide</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="bg-primary/10 p-2 rounded-full">
+                    <DollarSign className="h-4 w-4 text-primary" />
+                  </div>
+                  <span>Digitize communication, markets, and financial services</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="bg-primary/10 p-2 rounded-full">
+                    <Leaf className="h-4 w-4 text-primary" />
+                  </div>
+                  <span>Improve agricultural productivity through smart technologies</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="bg-primary/10 p-2 rounded-full">
+                    <Users className="h-4 w-4 text-primary" />
+                  </div>
+                  <span>Foster inclusive economic growth for women and youth</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Impact Stats */}
       <section className="py-16 bg-card/30">
@@ -100,67 +180,201 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Overview Section */}
-      <section className="py-20">
+
+      {/* Programs Preview */}
+      <section className="py-20 bg-gradient-to-b from-card/20 to-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <Badge className="mb-4 bg-primary/10 text-primary border-primary/20">🌟 Who We Are</Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-balance">About Govisarana Project</h2>
-            <p className="text-lg text-muted-foreground text-pretty">
-              The Govisarana Project is a community-driven agricultural movement in Sri Lanka. We work to uplift farming
-              families by combining tradition with modern technology, empowering women, and building sustainable income
-              opportunities.
+          <div className="text-center mb-16">
+            <Badge variant="outline" className="mb-4 text-primary border-primary font-semibold py-1 px-3">
+              Our Initiatives
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-balance bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+              Our Programs
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
+              Under the Digital Village Initiative, Govisarana delivers a suite of integrated programs that strengthen rural farming communities and harness digital tools for inclusive growth
             </p>
           </div>
 
-          <div className="space-y-6 max-w-3xl mx-auto mb-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            <Card className="border-primary/15 hover:border-primary/40 transition-all duration-300 hover:shadow-lg group overflow-hidden">
+              <CardHeader className="pb-6">
+                <div className="bg-primary/10 p-3 rounded-lg w-fit mb-4 group-hover:bg-primary/20 transition-colors">
+                  <Users className="h-6 w-6 text-primary" />
+                </div>
+                <CardTitle className="text-xl mb-3 group-hover:text-primary transition-colors">Community Organization & Capacity Building</CardTitle>
+                <CardDescription className="text-base leading-relaxed">
+                  Organizes 1,000-family Farming Villages into 40 small groups for shared learning and cooperation.
+                  Trains community leaders and facilitators to manage local institutions effectively.
+                </CardDescription>
+              </CardHeader>
+              <div className="px-6 pb-4">
+                <Button variant="outline" size="sm" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                  Learn More
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </div>
+            </Card>
+
+            <Card className="border-primary/15 hover:border-primary/40 transition-all duration-300 hover:shadow-lg group overflow-hidden">
+              <CardHeader className="pb-6">
+                <div className="bg-primary/10 p-3 rounded-lg w-fit mb-4 group-hover:bg-primary/20 transition-colors">
+                  <Globe className="h-6 w-6 text-primary" />
+                </div>
+                <CardTitle className="text-xl mb-3 group-hover:text-primary transition-colors">Digital Communication & Knowledge Sharing</CardTitle>
+                <CardDescription className="text-base leading-relaxed">
+                  Operates Communications Hubs that deliver weather alerts, market prices, and agronomy tips via SMS, apps, and community boards.
+                  Hosts virtual workshops and connects farmers with experts and government services.
+                </CardDescription>
+              </CardHeader>
+              <div className="px-6 pb-4">
+                <Button variant="outline" size="sm" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                  Learn More
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </div>
+            </Card>
+
+            <Card className="border-primary/15 hover:border-primary/40 transition-all duration-300 hover:shadow-lg group overflow-hidden">
+              <CardHeader className="pb-6">
+                <div className="bg-primary/10 p-3 rounded-lg w-fit mb-4 group-hover:bg-primary/20 transition-colors">
+                  <TrendingUp className="h-6 w-6 text-primary" />
+                </div>
+                <CardTitle className="text-xl mb-3 group-hover:text-primary transition-colors">Market Access & Value Addition</CardTitle>
+                <CardDescription className="text-base leading-relaxed">
+                  Runs Small Economic Centres (SEC) as digitally connected marketplaces.
+                  Aggregates produce, negotiates fair prices, and supports women-led value-addition enterprises.
+                </CardDescription>
+              </CardHeader>
+              <div className="px-6 pb-4">
+                <Button variant="outline" size="sm" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                  Learn More
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </div>
+            </Card>
+
+            <Card className="border-primary/15 hover:border-primary/40 transition-all duration-300 hover:shadow-lg group overflow-hidden">
+              <CardHeader className="pb-6">
+                <div className="bg-primary/10 p-3 rounded-lg w-fit mb-4 group-hover:bg-primary/20 transition-colors">
+                  <DollarSign className="h-6 w-6 text-primary" />
+                </div>
+                <CardTitle className="text-xl mb-3 group-hover:text-primary transition-colors">Financial Inclusion & Entrepreneurship</CardTitle>
+                <CardDescription className="text-base leading-relaxed">
+                  Offers secure savings, micro-loans, and youth start-up funding through Govisarana Bank.
+                  Provides financial literacy training and protects rural women from predatory lenders.
+                </CardDescription>
+              </CardHeader>
+              <div className="px-6 pb-4">
+                <Button variant="outline" size="sm" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                  Learn More
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </div>
+            </Card>
+
+            <Card className="border-primary/15 hover:border-primary/40 transition-all duration-300 hover:shadow-lg group overflow-hidden">
+              <CardHeader className="pb-6">
+                <div className="bg-primary/10 p-3 rounded-lg w-fit mb-4 group-hover:bg-primary/20 transition-colors">
+                  <Leaf className="h-6 w-6 text-primary" />
+                </div>
+                <CardTitle className="text-xl mb-3 group-hover:text-primary transition-colors">Organic Agriculture Excellence</CardTitle>
+                <CardDescription className="text-base leading-relaxed">
+                  Promotes organic farming methods for healthier produce and sustainable environmental practices.
+                  Provides training and resources for transitioning to organic certification.
+                </CardDescription>
+              </CardHeader>
+              <div className="px-6 pb-4">
+                <Button variant="outline" size="sm" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                  Learn More
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </div>
+            </Card>
+
+            <Card className="border-primary/15 hover:border-primary/40 transition-all duration-300 hover:shadow-lg group overflow-hidden">
+              <CardHeader className="pb-6">
+                <div className="bg-primary/10 p-3 rounded-lg w-fit mb-4 group-hover:bg-primary/20 transition-colors">
+                  <Sprout className="h-6 w-6 text-primary" />
+                </div>
+                <CardTitle className="text-xl mb-3 group-hover:text-primary transition-colors">Scaling and Innovation</CardTitle>
+                <CardDescription className="text-base leading-relaxed">
+                  Expands to reach 50,000 farming families, replicating successful village models.
+                  Integrates emerging digital services such as e-health, e-education, and smart agriculture solutions.
+                </CardDescription>
+              </CardHeader>
+              <div className="px-6 pb-4">
+                <Button variant="outline" size="sm" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                  Learn More
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </div>
+            </Card>
+          </div>
+
+          <div className="text-center">
+            <Button size="lg" className="bg-primary hover:bg-primary/90 px-8 py-6 text-lg font-semibold rounded-full">
+              Explore All Programs
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </div>
+        </div>
+      </section>
+
+
+
+      {/* Weekly Farmers' Fair Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
-              <p className="text-muted-foreground mb-6">
-                We believe true progress comes from empowering communities at every level through sustainable
-                agriculture, financial inclusion, and innovative farming practices.
+              <img
+                src="/sri-lankan-farmers-market-stall-with-fresh-organic.jpg"
+                alt="Weekly Farmers' Fair"
+                className="rounded-lg shadow-lg w-full"
+              />
+            </div>
+            <div>
+              <Badge variant="outline" className="mb-4 text-primary border-primary">
+                Women's Empowerment
+              </Badge>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-balance">Weekly Farmers' Fair</h2>
+              <p className="text-lg text-muted-foreground mb-8 text-pretty">
+                The Govisarana Weekly Fair is a cornerstone activity in every Farming Village, designed to empower rural women and strengthen household incomes.
               </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="flex flex-col items-center text-center space-y-3">
-                <div className="bg-primary/10 p-4 rounded-full">
-                  <Users className="h-8 w-8 text-primary" />
+              <div className="space-y-4 mb-8">
+                <div className="flex items-center space-x-3">
+                  <div className="bg-primary/10 p-2 rounded-full">
+                    <Users className="h-4 w-4 text-primary" />
+                  </div>
+                  <span>Women-Led Marketplace: Village women bring fresh produce from their home gardens</span>
                 </div>
-                <div>
-                  <span className="font-medium text-lg">Community Building</span>
-                  <p className="text-sm text-muted-foreground">Organizing families into supportive groups</p>
+                <div className="flex items-center space-x-3">
+                  <div className="bg-primary/10 p-2 rounded-full">
+                    <DollarSign className="h-4 w-4 text-primary" />
+                  </div>
+                  <span>Consistent Income: Weekly earnings provide reliable supplementary income</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="bg-primary/10 p-2 rounded-full">
+                    <TrendingUp className="h-4 w-4 text-primary" />
+                  </div>
+                  <span>Financial Inclusion: Linked to Govisarana Bank for savings and micro-loans</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="bg-primary/10 p-2 rounded-full">
+                    <Heart className="h-4 w-4 text-primary" />
+                  </div>
+                  <span>Community Spirit: Gathering place for knowledge-sharing and social connection</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="bg-primary/10 p-2 rounded-full">
+                    <Globe className="h-4 w-4 text-primary" />
+                  </div>
+                  <span>Digital Integration: Sales tracked via Communications Hub</span>
                 </div>
               </div>
-
-              <div className="flex flex-col items-center text-center space-y-3">
-                <div className="bg-primary/10 p-4 rounded-full">
-                  <Heart className="h-8 w-8 text-primary" />
-                </div>
-                <div>
-                  <span className="font-medium text-lg">Women Empowerment</span>
-                  <p className="text-sm text-muted-foreground">Training and micro-loans for household industries</p>
-                </div>
-              </div>
-
-              <div className="flex flex-col items-center text-center space-y-3">
-                <div className="bg-primary/10 p-4 rounded-full">
-                  <Sprout className="h-8 w-8 text-primary" />
-                </div>
-                <div>
-                  <span className="font-medium text-lg">Smart Agriculture</span>
-                  <p className="text-sm text-muted-foreground">Modern farming and organic cultivation methods</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="text-center mt-8">
-              <Button className="mt-6" asChild>
-                <Link href="/about">
-                  Learn More About Us
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
+              <Button size="lg">Learn About Our Fairs</Button>
             </div>
           </div>
         </div>
@@ -170,21 +384,23 @@ export default function HomePage() {
       <section className="py-20 bg-card/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-balance">Our Programs</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-balance">Core Digital-Enabled Institutions</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-              Comprehensive programs designed to support farmer families at every stage of their journey.
+              Under the Digital Village Initiative, Govisarana delivers a suite of integrated programs that strengthen rural farming communities and harness digital tools for inclusive growth
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6 mb-12">
             <Card className="border-primary/20 hover:border-primary/40 transition-colors">
               <CardHeader>
                 <div className="bg-primary/10 p-3 rounded-lg w-fit mb-4">
-                  <DollarSign className="h-6 w-6 text-primary" />
+                  <Globe className="h-6 w-6 text-primary" />
                 </div>
-                <CardTitle className="text-xl">Savings & Lending</CardTitle>
+                <CardTitle className="text-xl">Communications Hub</CardTitle>
                 <CardDescription>
-                  Community-based financial programs promoting discipline and access to capital.
+                  Digital platforms (messaging apps, SMS alerts, and community dashboards) connect all households.
+                  Shares agronomic advice, weather forecasts, and market price updates.
+                  Facilitates virtual training sessions and digital record-keeping.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -192,11 +408,14 @@ export default function HomePage() {
             <Card className="border-primary/20 hover:border-primary/40 transition-colors">
               <CardHeader>
                 <div className="bg-primary/10 p-3 rounded-lg w-fit mb-4">
-                  <Leaf className="h-6 w-6 text-primary" />
+                  <DollarSign className="h-6 w-6 text-primary" />
                 </div>
-                <CardTitle className="text-xl">Organic Farming</CardTitle>
+                <CardTitle className="text-xl">Small Economic Centre (SEC)</CardTitle>
                 <CardDescription>
-                  Sustainable, eco-friendly practices that benefit farmers and the environment.
+                  Functions as a digitally connected marketplace and resource center.
+                  Uses online tools to aggregate produce, link with buyers, and track transactions.
+                  Provides raw materials for women's value-addition industries, and disseminates modern agricultural knowledge.
+                  Enables e-commerce pilots for local products.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -206,9 +425,12 @@ export default function HomePage() {
                 <div className="bg-primary/10 p-3 rounded-lg w-fit mb-4">
                   <Users className="h-6 w-6 text-primary" />
                 </div>
-                <CardTitle className="text-xl">Village Industries</CardTitle>
+                <CardTitle className="text-xl">Govisarana Bank</CardTitle>
                 <CardDescription>
-                  Small industries for rural women, fostering entrepreneurship and independence.
+                  Employs digital finance solutions to promote savings and responsible borrowing.
+                  Offers microfinance and youth entrepreneurship funding through secure mobile transactions.
+                  Protects rural women from informal moneylenders by offering fair, transparent credit.
+                  Builds financial literacy using interactive apps and digital workshops.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -218,21 +440,13 @@ export default function HomePage() {
                 <div className="bg-primary/10 p-3 rounded-lg w-fit mb-4">
                   <Package className="h-6 w-6 text-primary" />
                 </div>
-                <CardTitle className="text-xl">Value-Added Products</CardTitle>
+                <CardTitle className="text-xl">Scaling and Innovation</CardTitle>
                 <CardDescription>
-                  Processing and packaging local goods for better markets and increased income.
+                  Expands to reach 50,000 farming families, replicating successful village models.
+                  Integrates emerging digital services such as e-health, e-education, and smart agriculture solutions to deepen impact.
                 </CardDescription>
               </CardHeader>
             </Card>
-          </div>
-
-          <div className="text-center">
-            <Button size="lg" asChild>
-              <Link href="/programs">
-                Explore All Programs
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
           </div>
         </div>
       </section>
@@ -271,7 +485,7 @@ export default function HomePage() {
             </div>
             <div>
               <img
-                src="/sri-lankan-farmers-market-stall-with-fresh-organic.jpg"
+                src="/market-farmer.jpg"
                 alt="Farmers market stall"
                 className="rounded-lg shadow-lg w-full"
               />
@@ -284,10 +498,9 @@ export default function HomePage() {
       <section className="py-20 bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-balance">Join Our Mission</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-balance">Join Our Journey</h2>
             <p className="text-lg text-muted-foreground mb-8 text-pretty">
-              Be part of our journey to uplift rural Sri Lanka. Whether as a farmer, entrepreneur, or supporter, your
-              contribution makes a difference.
+              Step into the heart of the Digital Village Initiative by supporting Govisarana—a project that empowers farming families, uplifts village women, and strengthens local economies. By joining our journey, you become part of a movement that connects rural communities with modern technology, sustainable markets, and inclusive financial systems. Together, we can expand from our current 9,000+ families to 50,000 thriving households, transforming villages into vibrant hubs of opportunity and resilience. Whether as a partner, supporter, or advocate, your involvement helps build a future where every farming family can grow, prosper, and lead with confidence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="text-lg px-8 shadow-lg" asChild>

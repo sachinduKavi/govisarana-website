@@ -68,11 +68,138 @@ export default function ProgramsPage() {
 
       {/* Services Description */}
       <div className="mb-16 text-center mt-20 px-4">
-        <Badge className="mb-4 bg-primary/20 text-primary border-primary/30">Our Services</Badge>
         <h2 className="text-3xl font-bold mb-4 text-gray-900">Comprehensive Support for Farming Communities</h2>
-        <p className="text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed">
-          Govisarana provides essential services to its members, ensuring that farming families receive the necessary 
-          support to improve their livelihoods and become self-reliant.
+        <p className="text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed mb-8">
+          Govisarana offers a suite of integrated programs designed to empower rural communities, 
+          strengthen livelihoods, and foster digital inclusion. Each program is carefully crafted to 
+          create sustainable impact for farming families, especially women and youth.
+        </p>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-left max-w-6xl mx-auto">
+          {/* Community Organization */}
+          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+            <div className="text-primary text-2xl font-bold mb-2">1</div>
+            <h3 className="text-xl font-semibold mb-3 text-gray-800">Community Organization & Small Groups</h3>
+            <ul className="text-gray-600 space-y-2">
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                Organizes 1,000-household Farming Villages into 40 small groups of 25 families each.
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                Facilitates peer learning, collaboration, and shared decision-making.
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                Strengthens community governance and local leadership.
+              </li>
+            </ul>
+          </div>
+
+          {/* Digital Communication */}
+          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+            <div className="text-primary text-2xl font-bold mb-2">2</div>
+            <h3 className="text-xl font-semibold mb-3 text-gray-800">Digital Communication & Knowledge Sharing</h3>
+            <ul className="text-gray-600 space-y-2">
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                Communications Hubs deliver real-time updates on weather, markets, and modern farming techniques.
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                Offers virtual training, digital record-keeping, and access to government services.
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                Connects farmers with experts, enabling informed decisions and improved productivity.
+              </li>
+            </ul>
+          </div>
+
+          {/* Market Access */}
+          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+            <div className="text-primary text-2xl font-bold mb-2">3</div>
+            <h3 className="text-xl font-semibold mb-3 text-gray-800">Market Access & Value Addition</h3>
+            <ul className="text-gray-600 space-y-2">
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                Small Economic Centres (SEC) aggregate farm produce and provide a platform for fair trade.
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                Supports women-led enterprises in processing, packaging, and selling value-added products.
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                Introduces e-commerce and digital marketplaces to expand market reach beyond the village.
+              </li>
+            </ul>
+          </div>
+
+          {/* Financial Inclusion */}
+          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+            <div className="text-primary text-2xl font-bold mb-2">4</div>
+            <h3 className="text-xl font-semibold mb-3 text-gray-800">Financial Inclusion & Entrepreneurship</h3>
+            <ul className="text-gray-600 space-y-2">
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                Govisarana Bank promotes savings, microloans, and entrepreneurship funding for youth and women.
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                Encourages responsible borrowing and financial literacy through workshops and digital tools.
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                Protects families from predatory lending and strengthens economic resilience.
+              </li>
+            </ul>
+          </div>
+
+          {/* Weekly Farmers' Fair */}
+          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+            <div className="text-primary text-2xl font-bold mb-2">5</div>
+            <h3 className="text-xl font-semibold mb-3 text-gray-800">Weekly Farmers' Fair</h3>
+            <ul className="text-gray-600 space-y-2">
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                A community marketplace where village women sell produce from home gardens every week.
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                Generates consistent income and encourages regular savings in Govisarana Bank.
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                Provides a platform for entrepreneurship, skill development, and community bonding.
+              </li>
+            </ul>
+          </div>
+
+          {/* Scaling & Innovation */}
+          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+            <div className="text-primary text-2xl font-bold mb-2">6</div>
+            <h3 className="text-xl font-semibold mb-3 text-gray-800">Scaling & Innovation</h3>
+            <ul className="text-gray-600 space-y-2">
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                Pilot-tested in Trincomalee (2018), now expanding to reach 50,000 families.
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                Integrates digital tools for production tracking, financial transactions, and knowledge dissemination.
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                Serves as a model for replicable, digitally empowered villages across Sri Lanka.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <p className="text-gray-700 max-w-4xl mx-auto mt-8 text-lg leading-relaxed font-medium">
+          Through these programs, Govisarana integrates technology, community organization, and economic 
+          empowerment to transform rural life, uplift women, and build resilient, self-sufficient villages.
         </p>
       </div>
 

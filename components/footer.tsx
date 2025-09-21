@@ -10,7 +10,8 @@ export default function Footer() {
           {/* Organization Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <Image src="/logo.png" alt="Govisarana Logo" width={48} height={48} className="rounded-full" />
+              {/* Increased logo size from 48x48 to 64x64 */}
+              <Image src="/logo.png" alt="Govisarana Logo" width={64} height={64} className="rounded-full" />
               <div>
                 <h3 className="text-xl font-bold">Govisarana</h3>
                 <p className="text-sm text-gray-300">Farmers' Organization</p>
@@ -81,7 +82,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-primary flex-shrink-0" />
-                <span className="text-sm text-gray-300">+94 11 234 5678</span>
+                <span className="text-sm text-gray-300">+94 81 223 9995</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-primary flex-shrink-0" />
