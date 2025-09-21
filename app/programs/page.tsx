@@ -36,9 +36,6 @@ export default function ProgramsPage() {
         {/* Content container */}
         <div className="container mx-auto px-4 text-center relative z-10">
           <div className="max-w-4xl mx-auto backdrop-blur-xs bg-[#cecece34] p-8 rounded-2xl shadow-2xl border border-white/30">
-            <Badge className="mb-4 bg-primary/20 text-primary border-primary/30 hover:bg-primary/30 text-sm font-semibold py-1 px-3">
-              🌱 Our Programs
-            </Badge>
             
             <h1 className="text-4xl md:text-6xl font-bold text-balance mb-6 text-gray-900 leading-tight">
               Empowering <span className="text-primary">Communities</span> Through Action
