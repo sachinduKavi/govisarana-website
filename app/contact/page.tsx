@@ -37,7 +37,7 @@ export default function ContactPage() {
       <section 
         className="relative py-20 min-h-[75vh] flex items-center justify-center overflow-hidden"
         style={{
-          backgroundImage: "url('/harvest.jpg')",
+          backgroundImage: "url('/contac.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed"
@@ -48,13 +48,13 @@ export default function ContactPage() {
         
         {/* Content container */}
         <div className="container mx-auto px-4 text-center relative z-10">
-          <div className="max-w-4xl mx-auto backdrop-blur-xs bg-white/10 p-8 rounded-2xl shadow-2xl border border-white/30">
+          <div className="max-w-4xl mx-auto backdrop-blur-xs bg-black/40 p-8 rounded-2xl shadow-2xl border border-white/30">
             
-            <h1 className="text-4xl md:text-6xl font-bold text-balance mb-6 text-gray-900 leading-tight">
-              Be Part of the <span className="text-primary">Govisarana</span> Journey
+            <h1 className="text-4xl md:text-6xl font-bold text-balance mb-6 text-white leading-tight">
+              Be Part of the Govisarana Journey
             </h1>
-            
-            <p className="text-xl text-white text-pretty mb-8 max-w-2xl mx-auto leading-relaxed">
+            {/* <span className="text-primary">Govisarana</span> */}
+            <p className="text-xl text-white font-semi-bold text-pretty mb-8 max-w-2xl mx-auto leading-relaxed">
               Step into a movement that is transforming rural Sri Lanka. By joining the Govisarana journey, you become a catalyst for empowering farming families, uplifting women entrepreneurs, and building self-reliant, digitally connected villages.
             </p>
             
