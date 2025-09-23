@@ -55,7 +55,7 @@ export default function HomePage() {
 
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
-            <div className="max-w-4xl mx-auto backdrop-blur-xs bg-black/30 p-8 rounded-2xl shadow-2xl border border-white/30">
+            <div className="max-w-4xl mx-auto backdrop-blur-xs bg-black/10 p-8 rounded-2xl shadow-2xl border border-white/30">
               <Badge className="mb-4 bg-primary/20 text-primary hover:bg-primary/30">
                 Digital Village Initiative
               </Badge>
