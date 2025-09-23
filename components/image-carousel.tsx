@@ -122,7 +122,7 @@ export function ImageCarousel() {
                     : "translate-y-12 opacity-0"
                 )}
             >
-              {/* <div className="bg-black/40 backdrop-blur-xl rounded-2xl p-5 md:p-6 border border-white/10 shadow-2xl w-[60vw] mx-auto flex flex-col items-center justify-center">
+              <div className="bg-black/40 backdrop-blur-xl rounded-2xl p-5 md:p-6 border border-white/10 shadow-2xl w-[60vw] mx-auto flex flex-col items-center justify-center">
                 <h3
                   className={cn(
                     "text-2xl md:text-3xl lg:text-4xl font-bold mb-3 text-balance text-white text-center transition-all duration-700 delay-200",
@@ -141,7 +141,7 @@ export function ImageCarousel() {
                 >
                   {image.description}
                 </p>
-              </div> */}
+              </div>
             </div>
           </div>
         ))}

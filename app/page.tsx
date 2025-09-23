@@ -12,28 +12,32 @@ import { redirect } from "next/navigation"
 
 const heroContent = [
   {
-    title: "Empowering Rural Communities",
+    title: "Innovative Farming Solutions",
     description:
-      "Supporting farmer families through sustainable agricultural practices and community development programs",
+      "Introducing smart agriculture techniques and tools to improve crop yields and efficiency",
   },
   {
-    title: "Women's Empowerment in Agriculture",
-    description: "Creating opportunities for women in agriculture through value-added processing and entrepreneurship",
-  },
-  {
-    title: "Knowledge & Training Programs",
+    title: "Empowering Women Leaders",
     description:
-      "Providing modern agricultural training and education to enhance farming productivity and sustainability",
+      "Encouraging women to take leadership roles in rural enterprises and sustainable projects",
   },
   {
-    title: "Financial Empowerment",
-    description: "Building financial literacy through savings circles and micro-lending programs for rural development",
+    title: "Community Education & Workshops",
+    description:
+      "Providing practical training and educational programs to strengthen local skills and knowledge",
   },
   {
-    title: "Organic Agriculture Excellence",
-    description: "Promoting organic farming methods for healthier produce and sustainable environmental practices",
+    title: "Financial Inclusion Initiatives",
+    description:
+      "Facilitating access to credit, savings programs, and financial planning resources for rural families",
   },
-]
+  {
+    title: "Sustainable Farming Practices",
+    description:
+      "Promoting environmentally friendly agriculture methods to ensure long-term food security",
+  },
+];
+
 
 export default function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -56,9 +60,7 @@ export default function HomePage() {
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <div className="max-w-4xl mx-auto backdrop-blur-xs bg-black/10 p-8 rounded-2xl shadow-2xl border border-white/30">
-              <Badge className="mb-4 bg-primary/20 text-primary hover:bg-primary/30">
-                Digital Village Initiative
-              </Badge>
+          
               <h1 className="text-3xl md:text-5xl font-bold text-balance mb-6 text-white drop-shadow-2xl transition-all duration-700">
                 {heroContent[currentSlide].title}
               </h1>
