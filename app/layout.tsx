@@ -7,6 +7,7 @@ import "./globals.css"
 import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 import { Suspense } from "react"
+import { redirect } from "next/navigation"
 
 export const metadata: Metadata = {
   title: "Govisarana - Empowering Farmer Families in Sri Lanka", // Updated title to remove Agricultural Empowerment
@@ -22,6 +23,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  
   return (
     <html lang="en">
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>

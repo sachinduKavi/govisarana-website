@@ -7,6 +7,8 @@ import { Badge } from "@/components/ui/badge"
 import { Leaf, Users, TrendingUp, Globe, Heart, Sprout, Package, DollarSign, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import { ImageCarousel } from "@/components/image-carousel"
+import { redirect } from "next/navigation"
+
 
 const heroContent = [
   {
