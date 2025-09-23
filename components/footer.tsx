@@ -10,7 +10,6 @@ export default function Footer() {
           {/* Organization Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              {/* Increased logo size from 48x48 to 64x64 */}
               <Image src="/logo.png" alt="Govisarana Logo" width={64} height={64} className="rounded-full" />
               <div>
                 <h3 className="text-xl font-bold">Govisarana</h3>
@@ -113,6 +112,22 @@ export default function Footer() {
                 <Linkedin className="h-5 w-5" />
               </a>
             </div>
+            
+            {/* Powered by Nanosoft */}
+            <div className="flex items-center space-x-2 bg-white p-2 rounded-lg text-sm text-black">
+              <span>Powered by</span>
+              <div className="flex items-center space-x-1">
+                <Image 
+                  src="/nanosoft-logo.png" 
+                  alt="Nanosoft Logo" 
+                  width={20} 
+                  height={20} 
+                  className="object-contain"
+                />
+                <span className="font-medium">Nanosoft</span>
+              </div>
+            </div>
+            
             <div className="text-sm text-gray-400 text-center md:text-right">
               <p>&copy; 2024 Govisarana Farmers' Organization. All rights reserved.</p>
               <p className="mt-1">Empowering Sri Lankan Agriculture</p>
