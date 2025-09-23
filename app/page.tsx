@@ -53,7 +53,7 @@ export default function HomePage() {
 
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
-            <div className="bg-gradient-to-br from-slate-900/70 via-slate-800/60 to-slate-900/70 backdrop-blur-xl rounded-3xl p-8 md:p-12 shadow-2xl border border-white/15">
+            <div className="max-w-4xl mx-auto backdrop-blur-xs bg-black/20 p-8 rounded-2xl shadow-2xl border border-white/30">
               <Badge className="mb-4 bg-primary/20 text-primary hover:bg-primary/30">
                 Digital Village Initiative
               </Badge>
@@ -329,7 +329,7 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <img
-                src="/sri-lankan-farmers-market-stall-with-fresh-organic.jpg"
+                src="/farmer-market.jpg"
                 alt="Weekly Farmers' Fair"
                 className="rounded-lg shadow-lg w-full"
               />

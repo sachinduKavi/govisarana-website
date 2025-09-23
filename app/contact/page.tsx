@@ -37,18 +37,18 @@ export default function ContactPage() {
       <section 
         className="relative py-20 min-h-[75vh] flex items-center justify-center overflow-hidden"
         style={{
-          backgroundImage: "url('/farmer.jpg')",
+          backgroundImage: "url('/harvest.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed"
         }}
       >
         {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/50 via-primary/50 to-transparent"></div>
+        <div className="absolute inset-0 from-primary/50 via-primary/50 to-transparent"></div>
         
         {/* Content container */}
         <div className="container mx-auto px-4 text-center relative z-10">
-          <div className="max-w-4xl mx-auto backdrop-blur-xs bg-[#cecece34] p-8 rounded-2xl shadow-2xl border border-white/30">
+          <div className="max-w-4xl mx-auto backdrop-blur-xs bg-white/10 p-8 rounded-2xl shadow-2xl border border-white/30">
             
             <h1 className="text-4xl md:text-6xl font-bold text-balance mb-6 text-gray-900 leading-tight">
               Be Part of the <span className="text-primary">Govisarana</span> Journey
