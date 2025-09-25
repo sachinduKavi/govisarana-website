@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
@@ -97,7 +99,12 @@ export default function DownloadPage() {
 
           {/* Call-to-action button */}
           <div className="mt-10">
-            <button className="bg-white text-primary font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center mx-auto gap-2">
+            <button 
+             onClick={() => {
+              console.log("Download APK clicked");
+              window.location.href = "https://firebasestorage.googleapis.com/v0/b/govisarana-project.firebasestorage.app/o/apk%2Fd-village.apk?alt=media&token=654bd2e7-c5a0-4bfa-aa86-ace65e131545"
+            }} 
+            className="cursor-pointer bg-white text-primary font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center mx-auto gap-2">
               <Download className="h-5 w-5" />
               Download Now
             </button>
@@ -173,8 +180,10 @@ export default function DownloadPage() {
           {/* APK Download */}
           <div className="border-t pt-8">
             <p className="text-sm text-muted-foreground mb-4">Or download directly for Android devices:</p>
-            <Button variant="outline" size="lg" className="gap-2 bg-transparent">
-              <Download className="h-4 w-4" />
+            <Button onClick={() => {
+              console.log("Download APK clicked");
+              window.location.href = "https://firebasestorage.googleapis.com/v0/b/govisarana-project.firebasestorage.app/o/apk%2Fd-village.apk?alt=media&token=654bd2e7-c5a0-4bfa-aa86-ace65e131545"
+            }} variant="outline" size="lg" className="gap-2 bg-transparent">
               Download APK
             </Button>
           </div>
