@@ -17,6 +17,7 @@ import {
   Mail,
   Phone,
 } from "lucide-react"
+import LegalDocs from "@/components/LegalDocs"
 
 export default function DownloadPage() {
   const features = [
@@ -231,6 +232,9 @@ export default function DownloadPage() {
           </div>
         </div>
       </section>
+
+        <LegalDocs/>
+
 
       {/* Footer CTA */}
       <section className="py-20 px-4 bg-primary text-primary-foreground">
