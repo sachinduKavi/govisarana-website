@@ -8,6 +8,7 @@ import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 import { Suspense } from "react"
 import { redirect } from "next/navigation"
+import PathLayout from "@/components/layouts/PathLayout"
 
 export const metadata: Metadata = {
   title: "Govisarana - Empowering Farmer Families in Sri Lanka", // Updated title to remove Agricultural Empowerment
@@ -23,14 +24,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  
+
   return (
     <html lang="en">
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
         <Suspense fallback={<div>Loading...</div>}>
-          <Navigation />
-          <main>{children}</main>
-          <Footer />
+          <PathLayout>{children}</PathLayout>
         </Suspense>
         <Analytics />
       </body>
