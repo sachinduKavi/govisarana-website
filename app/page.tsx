@@ -24,7 +24,6 @@ const WelcomePage = () => {
   // Memoized countdown calculation
   const calculateCountdown = useCallback((distance: number): string => {
     if (distance <= 0) return "00:00:00:00";
-
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
