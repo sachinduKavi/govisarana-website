@@ -6,8 +6,8 @@ import { useAppDispatch, useAppSelector } from "@/hooks/useRedux";
 import { toggleState } from "@/lib/redux/sitelock/sitelock-slice";
 
 // Constants
-const TARGET_DATE = new Date("2025-09-29T17:43:30").getTime();
-const LAUNCH_DATE_INFO = "September 30, 2025 at 10:00 AM";
+const TARGET_DATE = new Date("2025-09-29T10:00:00").getTime();
+const LAUNCH_DATE_INFO = "September 29, 2025 at 10:00 AM";
 const SITE_DESCRIPTION = "Govisarana is a comprehensive digital website and mobile app developed by Nanosoft Solution (Pvt) Ltd.";
 
 const WelcomePage = () => {
