@@ -9,6 +9,7 @@ import Footer from "@/components/footer"
 import { Suspense } from "react"
 import { redirect } from "next/navigation"
 import PathLayout from "@/components/layouts/PathLayout"
+import ReduxProvide from "./ReduxProvide"
 
 export const metadata: Metadata = {
   title: "Govisarana - Empowering Farmer Families in Sri Lanka", // Updated title to remove Agricultural Empowerment
@@ -29,7 +30,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
         <Suspense fallback={<div>Loading...</div>}>
-          <PathLayout>{children}</PathLayout>
+          <ReduxProvide>
+            <PathLayout>{children}</PathLayout>
+          </ReduxProvide>
         </Suspense>
         <Analytics />
       </body>

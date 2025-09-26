@@ -18,8 +18,19 @@ import {
   Phone,
 } from "lucide-react"
 import LegalDocs from "@/components/LegalDocs"
+import { useAppSelector } from "@/hooks/useRedux"
+import { RootState } from "@/lib/redux/store"
+import { redirect } from "next/navigation";
 
 export default function DownloadPage() {
+
+  const siteLock = useAppSelector((state: RootState) => state.siteLockSlice);
+  if (!siteLock) {
+    redirect("/");
+  }
+
+
+
   const features = [
     {
       icon: DollarSign,

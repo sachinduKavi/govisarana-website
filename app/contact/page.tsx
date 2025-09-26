@@ -11,8 +11,18 @@ import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Phone, Mail, MapPin, Clock, Users, Heart, Leaf, Send, CheckCircle } from "lucide-react"
 import { useState } from "react"
+import { useAppSelector } from "@/hooks/useRedux"
+import { RootState } from "@/lib/redux/store"
+import { redirect } from "next/navigation";
+import { useEffect } from "react";
 
 export default function ContactPage() {
+  const siteLock = useAppSelector((state: RootState) => state.siteLockSlice);
+  if (!siteLock) {
+    redirect("/");
+  }
+
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",

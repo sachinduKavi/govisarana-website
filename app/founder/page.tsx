@@ -1,9 +1,22 @@
+"use client"
+
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Users, Heart, Target, TrendingUp, Award, Globe, Lightbulb, Shield, Scale, Sparkles } from "lucide-react"
+import { useAppSelector } from "@/hooks/useRedux"
+import { RootState } from "@/lib/redux/store"
+import { redirect } from "next/navigation"
+import { useEffect } from "react"
+
 
 export default function FounderPage() {
+  const siteLock = useAppSelector((state: RootState) => state.siteLockSlice);
+  if (!siteLock) {
+    redirect("/");
+  }
+
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-muted/20">
       {/* Hero Section */}

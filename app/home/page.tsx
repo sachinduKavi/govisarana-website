@@ -8,6 +8,8 @@ import { Leaf, Users, TrendingUp, Globe, Heart, Sprout, Package, DollarSign, Arr
 import Link from "next/link"
 import { ImageCarousel } from "@/components/image-carousel"
 import { redirect } from "next/navigation"
+import { useAppSelector } from "@/hooks/useRedux"
+import { RootState } from "@/lib/redux/store"
 
 
 const heroContent = [
@@ -41,6 +43,11 @@ const heroContent = [
 
 export default function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0)
+
+  const siteLock = useAppSelector((state: RootState) => state.siteLockSlice);
+  if (!siteLock) {
+    redirect("/");
+  }
 
   useEffect(() => {
     const interval = setInterval(() => {

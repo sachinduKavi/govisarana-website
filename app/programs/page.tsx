@@ -16,8 +16,17 @@ import {
   CheckCircle,
 } from "lucide-react"
 import Link from "next/link"
+import { useAppSelector } from "@/hooks/useRedux";
+import { RootState } from "@/lib/redux/store"
+import { redirect } from "next/navigation";
 
 export default function ProgramsPage() {
+  const siteLock = useAppSelector((state: RootState) => state.siteLockSlice);
+  if (!siteLock) {
+    redirect("/");
+  }
+
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-white via-amber-50/30 to-emerald-50/30">
       {/* Hero Section */}

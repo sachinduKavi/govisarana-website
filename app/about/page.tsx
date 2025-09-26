@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -16,8 +18,19 @@ import {
   ArrowRight,
 } from "lucide-react"
 import Link from "next/link"
+import { useAppSelector } from "@/hooks/useRedux"
+import { RootState } from "@/lib/redux/store"
+import { redirect } from "next/navigation";
+import { useEffect } from "react";
+
 
 export default function AboutPage() {
+
+  const siteLock = useAppSelector((state: RootState) => state.siteLockSlice);
+  if (!siteLock) {
+    redirect("/");
+  }
+
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
