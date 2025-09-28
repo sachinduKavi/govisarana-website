@@ -138,7 +138,7 @@ const WelcomePage = () => {
           loading="lazy"
         />
         <p className="text-white/90 text-lg md:text-2xl">
-          Powered by Nanosoft Solution (Pvt) Ltd
+          Powered by Nanosoft Solutions (Pvt) Ltd
         </p>
       </div>
     </div>
