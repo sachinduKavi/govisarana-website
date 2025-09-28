@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -20,10 +22,11 @@ import { useAppSelector } from "@/hooks/useRedux";
 import { RootState } from "@/lib/redux/store"
 import { redirect } from "next/navigation";
 
+
 export default function ProgramsPage() {
   const siteLock = useAppSelector((state: RootState) => state.siteLockSlice);
   if (!siteLock) {
-    redirect("/");
+    redirect('/');
   }
 
 
