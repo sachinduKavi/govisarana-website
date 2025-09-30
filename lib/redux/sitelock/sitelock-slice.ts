@@ -3,7 +3,7 @@ import { PayloadAction } from "@reduxjs/toolkit";
 
 
 
-const initialState: boolean = false;
+const initialState: boolean = true;
 
 export const siteLockSlice = createSlice({
     name: "sitelockSlice",

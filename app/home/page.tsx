@@ -44,10 +44,10 @@ const heroContent = [
 export default function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0)
 
-  const siteLock = useAppSelector((state: RootState) => state.siteLockSlice);
-  if (!siteLock) {
-    redirect("/");
-  }
+  // const siteLock = useAppSelector((state: RootState) => state.siteLockSlice);
+  // if (!siteLock) {
+  //   redirect("/");
+  // }
 
   useEffect(() => {
     const interval = setInterval(() => {
