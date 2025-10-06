@@ -18,10 +18,11 @@
     return null;
     const rafIdRef = useRef<number | null>(null);
     const [countdown, setCountdown] = React.useState("");
-
+    
     // Memoized format function
     const formatTime = useCallback((time: number): string => {
       return time.toString().padStart(2, "0");
+      
     }, []);
 
     // Memoized countdown calculation
