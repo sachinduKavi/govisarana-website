@@ -3,12 +3,14 @@ import { errorToast, successToast } from '@/components/toast'
 import { connecctionError, generalError } from '@/components/toast'
 import { checkPasscodeReqest } from '@/http/system-request'
 
-export async function checkPasscode(passcode: string) {
+export async function checkPasscode(passcode: string): Promise<boolean> {
   try {
     Loading.setLoading(true)
     const response = await checkPasscodeReqest(passcode)
     if (response.status === 200 && response.data.proceed) {
-      successToast('Passcode accepted. Redirecting...')
+      successToast('Passcode accepted.')
+      console.log(response.data.content)
+      return true
     } else if (response.status !== 200) {
       connecctionError()
     } else {
@@ -19,5 +21,6 @@ export async function checkPasscode(passcode: string) {
     generalError()
   } finally {
     Loading.setLoading(false)
+    return false
   }
 }
