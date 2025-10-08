@@ -21,6 +21,6 @@ export async function checkPasscode(passcode: string): Promise<boolean> {
     generalError()
   } finally {
     Loading.setLoading(false)
-    return false
   }
+  return false
 }
