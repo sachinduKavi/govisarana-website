@@ -2,14 +2,19 @@ import Loading from '@/components/Loading'
 import { errorToast, successToast } from '@/components/toast'
 import { connecctionError, generalError } from '@/components/toast'
 import { checkPasscodeReqest } from '@/http/system-request'
+import { setAttribute } from '@/lib/redux/attributes/attribute-slice'
+import { AppDispatch } from '@/lib/redux/store'
 
-export async function checkPasscode(passcode: string): Promise<boolean> {
+export async function checkPasscode(
+  passcode: string,
+  dispatch: AppDispatch
+): Promise<boolean> {
   try {
     Loading.setLoading(true)
     const response = await checkPasscodeReqest(passcode)
     if (response.status === 200 && response.data.proceed) {
       successToast('Passcode accepted.')
-      console.log(response.data.content)
+      dispatch(setAttribute(response.data.content))
       return true
     } else if (response.status !== 200) {
       connecctionError()
