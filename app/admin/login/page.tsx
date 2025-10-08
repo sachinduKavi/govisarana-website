@@ -2,15 +2,16 @@
 
 import React, { useState } from 'react'
 import Image from 'next/image'
+import { checkPasscode } from '@/model/System'
 
 export default function Login() {
   const [password, setPassword] = useState('')
   const [isFocused, setIsFocused] = useState(false)
 
-  const handleSubmit = (e: { preventDefault: () => void }) => {
+  const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault()
     // Handle login logic here
-    console.log('Login attempted with password:', password)
+    const res = await checkPasscode(password)
   }
 
   return (
