@@ -1,6 +1,9 @@
+'use client'
+
 import React, { useRef, useState, useEffect } from 'react'
 import Image from 'next/image'
-import { otpSend } from '@/model/System'
+import { otpSend, verifyOtp } from '@/model/System'
+import { redirect } from 'next/navigation'
 
 export default function StageTwo({ selectedNumber, handleBack }: { selectedNumber: { ownerName: string; number: string; id: number } | null; handleBack: () => void }) {
   const [otp, setOtp] = useState<string[]>(new Array(6).fill(''))
@@ -58,16 +61,16 @@ export default function StageTwo({ selectedNumber, handleBack }: { selectedNumbe
     }
   }
 
-  const handleVerify = () => {
+  const handleVerify = async () => {
     const otpString = otp.join('')
     if (otpString.length !== 6) {
       setOtpError('Please enter a 6-digit code')
       return
     }
-
-    // Add your OTP verification logic here
-    console.log('Verifying OTP:', otpString)
-    // verifyOtp(otpString, selectedNumber?.id)
+    // Otp verification logic
+    if (await verifyOtp(otpString, selectedNumber!.id)) {
+      redirect('/admin/dashboard')
+    }
   }
 
   const handleResendOtp = async () => {

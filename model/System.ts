@@ -1,7 +1,7 @@
 import Loading from '@/components/Loading'
 import { errorToast, successToast } from '@/components/toast'
 import { connecctionError, generalError } from '@/components/toast'
-import { checkPasscodeReqest, sendOtpRequest } from '@/http/system-request'
+import { checkPasscodeReqest, sendOtpRequest, verifyOTPRequest } from '@/http/system-request'
 import { setAttribute } from '@/lib/redux/attributes/attribute-slice'
 import { AppDispatch } from '@/lib/redux/store'
 
@@ -41,6 +41,27 @@ export async function otpSend(mobileId: number): Promise<boolean> {
     }
   } catch (e: any) {
     console.error('Error sending OTP:', e)
+    generalError()
+  } finally {
+    Loading.setLoading(false)
+  }
+  return false
+}
+
+export async function verifyOtp(otp: string, mobileId: number) {
+  try {
+    Loading.setLoading(true)
+    const response = await verifyOTPRequest(otp, mobileId)
+    if (response.status === 200 && response.data.proceed) {
+      successToast('OTP verified successfully.')
+      return true
+    } else if (response.status !== 200) {
+      if (response.data.message === 'Invalid mobileId') {
+        errorToast('Session expired. Please login again.')
+      } else connecctionError()
+    }
+  } catch (e: any) {
+    console.error('Error verifying OTP:', e)
     generalError()
   } finally {
     Loading.setLoading(false)
