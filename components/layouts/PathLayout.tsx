@@ -6,7 +6,7 @@ import { redirect, usePathname } from 'next/navigation'
 import Loading from '../Loading'
 import { toast, ToastContainer } from 'react-toastify'
 import SidePanel from '../SidePanel'
-import { use } from 'react'
+import Cookies from 'js-cookie'
 import { useAppSelector } from '@/hooks/useRedux'
 import { RootState } from '@/lib/redux/store'
 import { jwtVerifyToken } from '@/middleware/token'
@@ -20,11 +20,18 @@ export default function PathLayout(props: { children: React.ReactNode }) {
     if (fullPathName !== '/admin/login') {
       console.log('Public Key from Redux:', publicKey) // Debug log
       if (publicKey) {
-        const tokenVerify = jwtVerifyToken(publicKey ?? '')
-        console.log('Token verification result:', tokenVerify) // Debug log
-        if (tokenVerify.status) return
+        const token = Cookies.get('jsonwebtoken')
+        console.log('=== COOKIE DEBUG INFO ===')
+        console.log('All cookies string:', document.cookie)
+        console.log('js-cookie get all:', Cookies.get())
+        console.log('jsonwebtoken cookie:', Cookies.get('jsonwebtoken'))
+        console.log('Current domain:', window.location.hostname)
+        console.log('Current protocol:', window.location.protocol)
+        console.log('=== END DEBUG INFO ===')
+        // const tokenVerify = jwtVerifyToken(publicKey ?? '')
+        // if (tokenVerify.status) return
       }
-      console.error('Token is expired or invalid, redirecting to login.')
+
       redirect('/admin/login')
     }
   }
