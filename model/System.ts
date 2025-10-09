@@ -1,14 +1,11 @@
 import Loading from '@/components/Loading'
 import { errorToast, successToast } from '@/components/toast'
 import { connecctionError, generalError } from '@/components/toast'
-import { checkPasscodeReqest } from '@/http/system-request'
+import { checkPasscodeReqest, sendOtpRequest } from '@/http/system-request'
 import { setAttribute } from '@/lib/redux/attributes/attribute-slice'
 import { AppDispatch } from '@/lib/redux/store'
 
-export async function checkPasscode(
-  passcode: string,
-  dispatch: AppDispatch
-): Promise<boolean> {
+export async function checkPasscode(passcode: string, dispatch: AppDispatch): Promise<boolean> {
   try {
     Loading.setLoading(true)
     const response = await checkPasscodeReqest(passcode)
@@ -23,6 +20,27 @@ export async function checkPasscode(
     }
   } catch (e: any) {
     console.error('Error checking passcode:', e)
+    generalError()
+  } finally {
+    Loading.setLoading(false)
+  }
+  return false
+}
+
+export async function otpSend(mobileId: number): Promise<boolean> {
+  try {
+    Loading.setLoading(true)
+    const response = await sendOtpRequest(mobileId)
+    if (response.status === 200 && response.data.proceed) {
+      successToast('OTP sent successfully.')
+      return true
+    } else if (response.status !== 200) {
+      connecctionError()
+    } else {
+      generalError()
+    }
+  } catch (e: any) {
+    console.error('Error sending OTP:', e)
     generalError()
   } finally {
     Loading.setLoading(false)
