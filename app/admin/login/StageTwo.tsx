@@ -4,6 +4,8 @@ import React, { useRef, useState, useEffect } from 'react'
 import Image from 'next/image'
 import { otpSend, verifyOtp } from '@/model/System'
 import { redirect } from 'next/navigation'
+import { AppDispatch } from '@/lib/redux/store'
+import { useAppDispatch } from '@/hooks/useRedux'
 
 export default function StageTwo({ selectedNumber, handleBack }: { selectedNumber: { ownerName: string; number: string; id: number } | null; handleBack: () => void }) {
   const [otp, setOtp] = useState<string[]>(new Array(6).fill(''))
@@ -11,6 +13,7 @@ export default function StageTwo({ selectedNumber, handleBack }: { selectedNumbe
   const [timeLeft, setTimeLeft] = useState<number>(300) // 5 minutes in seconds
   const [canResend, setCanResend] = useState<boolean>(false)
   const inputRefs = useRef<(HTMLInputElement | null)[]>([])
+  const dispatch: AppDispatch = useAppDispatch()
 
   // Timer effect
   useEffect(() => {
@@ -68,7 +71,7 @@ export default function StageTwo({ selectedNumber, handleBack }: { selectedNumbe
       return
     }
     // Otp verification logic
-    if (await verifyOtp(otpString, selectedNumber!.id)) {
+    if (await verifyOtp(otpString, selectedNumber!.id, dispatch)) {
       redirect('/admin/dashboard')
     }
   }

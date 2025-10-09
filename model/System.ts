@@ -3,6 +3,7 @@ import { errorToast, successToast } from '@/components/toast'
 import { connecctionError, generalError } from '@/components/toast'
 import { checkPasscodeReqest, sendOtpRequest, verifyOTPRequest } from '@/http/system-request'
 import { setAttribute } from '@/lib/redux/attributes/attribute-slice'
+import { setPublicKey } from '@/lib/redux/keys/public-key'
 import { AppDispatch } from '@/lib/redux/store'
 
 export async function checkPasscode(passcode: string, dispatch: AppDispatch): Promise<boolean> {
@@ -48,12 +49,13 @@ export async function otpSend(mobileId: number): Promise<boolean> {
   return false
 }
 
-export async function verifyOtp(otp: string, mobileId: number) {
+export async function verifyOtp(otp: string, mobileId: number, dispatch: AppDispatch): Promise<boolean> {
   try {
     Loading.setLoading(true)
     const response = await verifyOTPRequest(otp, mobileId)
     if (response.status === 200 && response.data.proceed) {
       successToast('OTP verified successfully.')
+      dispatch(setPublicKey(response.data.content.publicKey))
       return true
     } else if (response.status !== 200) {
       if (response.data.message === 'Invalid mobileId') {
