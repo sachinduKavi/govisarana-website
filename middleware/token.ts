@@ -1,26 +1,18 @@
-import jwt, { JwtPayload } from 'jsonwebtoken'
+import { jwtVerify, importSPKI } from 'jose'
+import cookies from 'js-cookie'
 import { Payload } from '@/type/payloads'
+import { error } from 'console'
+import axios from 'axios'
 
 export async function jwtVerifyToken(publicKey: string): Promise<Payload> {
-  console.log('Verifying JWT token...') // Debugging line
   try {
-    const { cookies } = await import('next/headers')
-    const cookieStore = cookies()
-    // console.log('Token from cookie:', (await cookieStore).get('jsonwebtoken')?.value) // Debugging line
-    // if (!token) throw new Error('no token found')
-    // const payLoad = jwt.verify(token, publicKey) as JwtPayload
-    // if (payLoad) {
-    //   return {
-    //     status: true,
-    //     payload: payLoad.data,
-    //   }
-    // }
-    throw new Error('invalid token')
-  } catch (e: any) {
-    console.log('JWT verification error:', e.message) // Debugging line
-    return {
-      status: false,
-      payload: null,
+    const token = cookies.get('jsonwebtoken') || null
+    const response = await axios.post('/api/debug/cookies', { publicKey, token })
+    if (response.status === 200 && response.data.proceed) {
+      return { status: true, payload: response.data.content as Payload }
     }
+    throw new Error('Token verification is currently disabled for testing purposes.')
+  } catch (e: any) {
+    return { status: false, payload: e.message || 'Token verification failed' }
   }
 }

@@ -10,6 +10,7 @@ import Cookies from 'js-cookie'
 import { useAppSelector } from '@/hooks/useRedux'
 import { RootState } from '@/lib/redux/store'
 import { jwtVerifyToken } from '@/middleware/token'
+import { errorToast } from '../toast'
 
 export default function PathLayout(props: { children: React.ReactNode }) {
   const fullPathName = usePathname()
@@ -17,21 +18,16 @@ export default function PathLayout(props: { children: React.ReactNode }) {
   const publicKey = useAppSelector((state: RootState) => state.publicKeySlice)
 
   const checkAdminPrevilages = async () => {
-    if (fullPathName !== '/admin/login') {
-      console.log('Public Key from Redux:', publicKey) // Debug log
-      if (publicKey) {
-        const token = Cookies.get('jsonwebtoken')
-        console.log('=== COOKIE DEBUG INFO ===')
-        console.log('All cookies string:', document.cookie)
-        console.log('js-cookie get all:', Cookies.get())
-        console.log('jsonwebtoken cookie:', Cookies.get('jsonwebtoken'))
-        console.log('Current domain:', window.location.hostname)
-        console.log('Current protocol:', window.location.protocol)
-        console.log('=== END DEBUG INFO ===')
-        // const tokenVerify = jwtVerifyToken(publicKey ?? '')
-        // if (tokenVerify.status) return
+    try {
+      if (fullPathName === '/admin/login') return
+      if (!publicKey) throw new Error('Public key is missing')
+      const verified = await jwtVerifyToken(publicKey)
+      if (!verified.status) {
+        errorToast('You must be logged in to access the admin panel.')
+        redirect('/admin/login')
       }
-
+    } catch (e: any) {
+      errorToast('You must be logged in to access the admin panel.')
       redirect('/admin/login')
     }
   }

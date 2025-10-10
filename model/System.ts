@@ -5,6 +5,7 @@ import { checkPasscodeReqest, sendOtpRequest, verifyOTPRequest } from '@/http/sy
 import { setAttribute } from '@/lib/redux/attributes/attribute-slice'
 import { setPublicKey } from '@/lib/redux/keys/public-key'
 import { AppDispatch } from '@/lib/redux/store'
+import cookie from 'js-cookie'
 
 export async function checkPasscode(passcode: string, dispatch: AppDispatch): Promise<boolean> {
   try {
@@ -56,6 +57,7 @@ export async function verifyOtp(otp: string, mobileId: number, dispatch: AppDisp
     if (response.status === 200 && response.data.proceed) {
       successToast('OTP verified successfully.')
       dispatch(setPublicKey(response.data.content.publicKey))
+      cookie.set('jsonwebtoken', response.data.content.token, { expires: 1, sameSite: 'Lax' })
       return true
     } else if (response.status !== 200) {
       if (response.data.message === 'Invalid mobileId') {
