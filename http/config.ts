@@ -5,12 +5,20 @@ const localDomain = axios.create({
   withCredentials: true,
   headers: {
     'Content-Type': 'application/json',
-    Authorization:
-      'Bearer 2264b5e4aa907f47f315156479f0fa0ca07f55421d820b8e829f49d7c740e3f7',
+    Authorization: 'Bearer 2264b5e4aa907f47f315156479f0fa0ca07f55421d820b8e829f49d7c740e3f7',
   },
 })
 
-const domain = localDomain
+const liveDomain = axios.create({
+  baseURL: 'https://api-coop-digital-2-8f895bf0111e.herokuapp.com',
+  withCredentials: true,
+  headers: {
+    'Content-Type': 'application/json',
+    Authorization: 'Bearer 2264b5e4aa907f47f315156479f0fa0ca07f55421d820b8e829f49d7c740e3f7',
+  },
+})
+
+const domain = liveDomain
 domain.interceptors.response.use(
   (response) => response,
   (error) => {
