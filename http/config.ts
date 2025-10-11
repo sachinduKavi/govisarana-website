@@ -20,8 +20,8 @@ const liveDomain = axios.create({
   },
 })
 
-export const baseURL = localBaseURL
-const domain = localDomain
+export const baseURL = liveBaseURL
+const domain = liveDomain
 domain.interceptors.response.use(
   (response) => response,
   (error) => {
