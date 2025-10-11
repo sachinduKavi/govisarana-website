@@ -43,6 +43,7 @@
     "@remix-run/react": "latest",
     "@sveltejs/kit": "latest",
     "@vercel/analytics": "latest",
+    "antd": "^5.27.4",
     "autoprefixer": "^10.4.20",
     "axios": "^1.12.2",
     "class-variance-authority": "^0.7.1",

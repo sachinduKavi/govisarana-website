@@ -18,8 +18,9 @@ export default function PathLayout(props: { children: React.ReactNode }) {
   const publicKey = useAppSelector((state: RootState) => state.publicKeySlice)
 
   const checkAdminPrevilages = async () => {
+    if (fullPathName === '/admin/login') return
+
     try {
-      if (fullPathName === '/admin/login') return
       if (!publicKey) throw new Error('Public key is missing')
       const verified = await jwtVerifyToken(publicKey)
       if (!verified.status) {

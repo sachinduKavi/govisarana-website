@@ -1,7 +1,8 @@
 import axios from 'axios'
 
+const localBaseURL = 'http://localhost:3001'
 const localDomain = axios.create({
-  baseURL: 'http://localhost:3001',
+  baseURL: localBaseURL,
   withCredentials: true,
   headers: {
     'Content-Type': 'application/json',
@@ -9,8 +10,9 @@ const localDomain = axios.create({
   },
 })
 
+const liveBaseURL = 'https://api-coop-digital-2-8f895bf0111e.herokuapp.com'
 const liveDomain = axios.create({
-  baseURL: 'https://api-coop-digital-2-8f895bf0111e.herokuapp.com',
+  baseURL: liveBaseURL,
   withCredentials: true,
   headers: {
     'Content-Type': 'application/json',
@@ -18,7 +20,8 @@ const liveDomain = axios.create({
   },
 })
 
-const domain = liveDomain
+export const baseURL = localBaseURL
+const domain = localDomain
 domain.interceptors.response.use(
   (response) => response,
   (error) => {

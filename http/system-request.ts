@@ -11,3 +11,7 @@ export const sendOtpRequest = (mobileId: number) => {
 export const verifyOTPRequest = (otp: string, mobileId: number) => {
   return domain.post('web/verify-otp', { otp, mobileId })
 }
+
+export const fetchAllUsersRequest = () => {
+  return domain.get('web/getMembersDetails')
+}

@@ -1,7 +1,7 @@
 import Loading from '@/components/Loading'
 import { errorToast, successToast } from '@/components/toast'
 import { connecctionError, generalError } from '@/components/toast'
-import { checkPasscodeReqest, sendOtpRequest, verifyOTPRequest } from '@/http/system-request'
+import { checkPasscodeReqest, fetchAllUsersRequest, sendOtpRequest, verifyOTPRequest } from '@/http/system-request'
 import { setAttribute } from '@/lib/redux/attributes/attribute-slice'
 import { setPublicKey } from '@/lib/redux/keys/public-key'
 import { AppDispatch } from '@/lib/redux/store'
@@ -70,5 +70,21 @@ export async function verifyOtp(otp: string, mobileId: number, dispatch: AppDisp
   } finally {
     Loading.setLoading(false)
   }
+  return false
+}
+
+export async function loadUserDetails(): Promise<Object | false> {
+  try {
+    Loading.setLoading(true)
+    const response = await fetchAllUsersRequest()
+    if (response.status === 200 && response.data.proceed) {
+      return response.data.content
+    }
+  } catch (e: any) {
+    console.error('Error fetching user details:', e)
+  } finally {
+    Loading.setLoading(false)
+  }
+
   return false
 }

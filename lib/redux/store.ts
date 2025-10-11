@@ -19,7 +19,7 @@ const rootReducer = combineReducers({
 const persistConfig = {
   key: 'root',
   storage,
-  whitelist: ['attribute', 'publicKey'], // ✅ Only persist what you need
+  // whitelist: ['attributeSlice', 'publicKeySlice', 'siteLockSlice'], // only these slices will be persisted
 }
 
 // Wrap the root reducer with persistReducer
