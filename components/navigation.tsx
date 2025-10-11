@@ -28,17 +28,8 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link
-            href="/"
-            className="flex items-center space-x-3 hover:opacity-80 transition-opacity"
-          >
-            <Image
-              src="/logo.png"
-              alt="Govisarana Logo"
-              width={40}
-              height={40}
-              className="rounded-full"
-            />
+          <Link href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
+            <Image src="/logo.png" alt="Govisarana Logo" width={40} height={40} className="rounded-full" />
             <span className="text-xl font-bold text-gray-900">Govisarana</span>
           </Link>
 
@@ -58,27 +49,15 @@ export default function Navigation() {
                 {item.name}
               </Link>
             ))}
-            <Button
-              onClick={() => router.push('/admin/login')}
-              className="bg-primary hover:bg-primary/90 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
-            >
+            <Button onClick={() => router.push('/admin/login')} className="bg-primary hover:bg-primary/90 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105">
               Login
             </Button>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="hover:bg-gray-100"
-            >
-              {isMenuOpen ? (
-                <X className="h-6 w-6" />
-              ) : (
-                <Menu className="h-6 w-6" />
-              )}
+            <Button variant="ghost" size="sm" onClick={() => setIsMenuOpen(!isMenuOpen)} className="hover:bg-gray-100">
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
           </div>
         </div>
@@ -103,7 +82,7 @@ export default function Navigation() {
                 </Link>
               ))}
               <div className="px-3 py-2">
-                <Button className="w-full bg-primary hover:bg-primary/90 shadow-md">
+                <Button onClick={() => router.push('/admin/login')} className="w-full bg-primary hover:bg-primary/90 shadow-md">
                   Login
                 </Button>
               </div>
