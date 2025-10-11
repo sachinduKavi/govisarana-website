@@ -63,7 +63,7 @@ export async function verifyOtp(otp: string, mobileId: number, dispatch: AppDisp
       if (response.data.message === 'Invalid mobileId') {
         errorToast('Session expired. Please login again.')
       } else connecctionError()
-    }
+    } else errorToast('Invalid OTP. Please try again.')
   } catch (e: any) {
     console.error('Error verifying OTP:', e)
     generalError()

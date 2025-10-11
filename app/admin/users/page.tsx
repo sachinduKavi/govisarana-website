@@ -65,7 +65,10 @@ export default function Users() {
       setError(null)
       console.log('Fetching user details...')
 
-      const res = await loadUserDetails()
+      // Define a type for the possible response structure
+      type UserDetailsResponse = UserDetail[] | { content: UserDetail[] } | { proceed: boolean; content: UserDetail[] }
+
+      const res = (await loadUserDetails()) as UserDetailsResponse
       console.log('API Response:', res)
 
       // Handle the response based on your actual data structure
@@ -73,11 +76,11 @@ export default function Users() {
         // If the response is directly the array
         setUserDetails(res)
         console.log(`Loaded ${res.length} users directly from array`)
-      } else if (res && res.content && Array.isArray(res.content)) {
+      } else if (res && typeof res === 'object' && 'content' in res && Array.isArray(res.content)) {
         // If the response has a content property with the array
         setUserDetails(res.content)
         console.log(`Loaded ${res.content.length} users from res.content`)
-      } else if (res && res.proceed && Array.isArray(res.content)) {
+      } else if (res && typeof res === 'object' && 'proceed' in res && 'content' in res && Array.isArray(res.content)) {
         // If the response has proceed and content properties
         setUserDetails(res.content)
         console.log(`Loaded ${res.content.length} users from res.content with proceed`)
